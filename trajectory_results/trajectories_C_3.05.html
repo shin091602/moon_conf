@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trajectories C = 3.05</title>
+    <style>
+        body { font-family: 'Courier New', monospace; margin: 20px; background: #f5f5f5; }
+        h1, h2, h3 { color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .plot-container { width: 100%; height: 600px; border: 1px solid #ccc; margin: 20px 0; }
+        table { border-collapse: collapse; margin: 20px 0; background: white; }
+        th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: right; }
+        th { background: #4CAF50; color: white; }
+        tr:nth-child(even) { background: #f9f9f9; }
+        .section { background: white; padding: 20px; margin: 20px 0; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        a { color: #0066cc; }
+        .download-links { margin: 10px 0; }
+        .download-links a { margin-right: 15px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>KS Trajectories (C = 3.05)</h1>
+        <p><a href="index.html">← Back to Index</a></p>
+
+        <div class="section">
+            <h2>3D Plot (Interactive)</h2>
+            <iframe src="plot_C_3.05.html" class="plot-container" frameborder="0"></iframe>
+        </div>
+
+        <div class="section">
+            <h2>Initial Conditions</h2>
+            <h3>KS Coordinates (Q, P)</h3>
+            <table>
+                <tr>
+                    <th>Traj</th>
+                    <th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th>
+                    <th>P1</th><th>P2</th><th>P3</th><th>P4</th>
+                </tr>
+
+                <tr><td>1</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>+0.031826</td><td>-0.051239</td><td>+0.017982</td><td>+0.074075</td></tr>
+                <tr><td>2</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>-0.070325</td><td>+0.045643</td><td>+0.034426</td><td>+0.035137</td></tr>
+                <tr><td>3</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>+0.073230</td><td>-0.013821</td><td>+0.016569</td><td>+0.060171</td></tr>
+                <tr><td>4</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>+0.037287</td><td>+0.009608</td><td>-0.073090</td><td>-0.051224</td></tr>
+                <tr><td>5</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>+0.063131</td><td>+0.003814</td><td>+0.073626</td><td>-0.005273</td></tr>
+                <tr><td>6</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>-0.056938</td><td>+0.074660</td><td>-0.011166</td><td>+0.022539</td></tr>
+                <tr><td>7</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>-0.090101</td><td>+0.026692</td><td>+0.013187</td><td>+0.021075</td></tr>
+                <tr><td>8</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>-0.051311</td><td>+0.022189</td><td>+0.072501</td><td>+0.032668</td></tr>
+            </table>
+
+            <h3>Cartesian Coordinates (Initial XYZ)</h3>
+            <table>
+                <tr>
+                    <th>Traj</th>
+                    <th>X</th><th>Y</th><th>Z</th>
+                </tr>
+
+                <tr><td>1</td><td>0.98761878</td><td>-0.00021848</td><td>-0.00084278</td></tr>
+                <tr><td>2</td><td>0.98782634</td><td>-0.00093124</td><td>-0.00032419</td></tr>
+                <tr><td>3</td><td>0.98792425</td><td>-0.00000590</td><td>0.00003492</td></tr>
+                <tr><td>4</td><td>0.98693746</td><td>-0.00040055</td><td>-0.00141134</td></tr>
+                <tr><td>5</td><td>0.98697848</td><td>0.00076775</td><td>0.00095973</td></tr>
+                <tr><td>6</td><td>0.98679164</td><td>-0.00085109</td><td>0.00123058</td></tr>
+                <tr><td>7</td><td>0.98795336</td><td>-0.00009115</td><td>-0.00007767</td></tr>
+                <tr><td>8</td><td>0.98681509</td><td>-0.00047529</td><td>-0.00140197</td></tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Time History (Position)</h2>
+            <h3>x(t)</h3>
+            <iframe src="time_history_C_3.05_x.html" class="plot-container" style="height:400px;" frameborder="0"></iframe>
+            <h3>y(t)</h3>
+            <iframe src="time_history_C_3.05_y.html" class="plot-container" style="height:400px;" frameborder="0"></iframe>
+            <h3>z(t)</h3>
+            <iframe src="time_history_C_3.05_z.html" class="plot-container" style="height:400px;" frameborder="0"></iframe>
+        </div>
+
+        <div class="section">
+            <h2>Time History (Velocity)</h2>
+            <h3>vx(t)</h3>
+            <iframe src="time_history_C_3.05_vx.html" class="plot-container" style="height:400px;" frameborder="0"></iframe>
+            <h3>vy(t)</h3>
+            <iframe src="time_history_C_3.05_vy.html" class="plot-container" style="height:400px;" frameborder="0"></iframe>
+            <h3>vz(t)</h3>
+            <iframe src="time_history_C_3.05_vz.html" class="plot-container" style="height:400px;" frameborder="0"></iframe>
+        </div>
+
+    </div>
+</body>
+</html>
+
