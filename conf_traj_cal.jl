@@ -8,10 +8,10 @@ plotlyjs()  # インタラクティブなバックエンド（回転・ズーム
 include("ks_eom_auto.jl")
 
 # Parameters
-num_trj = 8
+num_trj = 2
 mu = 0.01215058426994 # earth-moon system
-C = 3.7 # Jacobi constant
-t_fin = 200pi 
+C = 2.0 # Jacobi constant
+t_fin = 10pi 
 tspan = (t_fin, 0.0)
 
 # Generate initial conditions with constraints
@@ -21,7 +21,7 @@ for i in 1:num_trj
     # Pのランダム方向（4次元超球面上で均一分布）
     v = randn(4)
     v_normalized = v / norm(v)
-    P = 8*mu * v_normalized
+    P = (mu/2) * v_normalized
 
     # Q = 0（特異点ぴったりから出発）
     u0_list[i] = [0.0, 0.0, 0.0, 0.0, P[1], P[2], P[3], P[4]]

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trajectories C = 2.05</title>
+    <style>
+        body { font-family: 'Courier New', monospace; margin: 20px; background: #f5f5f5; }
+        h1, h2, h3 { color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .plot-container { width: 100%; height: 600px; border: 1px solid #ccc; margin: 20px 0; }
+        table { border-collapse: collapse; margin: 20px 0; background: white; }
+        th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: right; }
+        th { background: #4CAF50; color: white; }
+        tr:nth-child(even) { background: #f9f9f9; }
+        .section { background: white; padding: 20px; margin: 20px 0; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        a { color: #0066cc; }
+        .download-links { margin: 10px 0; }
+        .download-links a { margin-right: 15px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>KS Trajectories (C = 2.05)</h1>
+        <p><a href="index.html">← Back to Index</a></p>
+
+        <div class="section">
+            <h2>3D Plot (Interactive)</h2>
+            <iframe src="plot_C_2.05.html" class="plot-container" frameborder="0"></iframe>
+        </div>
+
+        <div class="section">
+            <h2>Initial Conditions</h2>
+            <h3>KS Coordinates (Q, P)</h3>
+            <table>
+                <tr>
+                    <th>Traj</th>
+                    <th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th>
+                    <th>P1</th><th>P2</th><th>P3</th><th>P4</th>
+                </tr>
+
+                <tr><td>1</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>+0.003131</td><td>+0.002122</td><td>+0.000443</td><td>-0.004733</td></tr>
+                <tr><td>2</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>+0.000822</td><td>-0.002890</td><td>-0.004429</td><td>-0.002874</td></tr>
+                <tr><td>3</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>-0.000869</td><td>+0.003072</td><td>-0.003988</td><td>-0.003289</td></tr>
+                <tr><td>4</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>0.000000</td><td>+0.004025</td><td>+0.004033</td><td>-0.001841</td><td>-0.001028</td></tr>
+            </table>
+
+            <h3>Cartesian Coordinates (Initial XYZ)</h3>
+            <table>
+                <tr>
+                    <th>Traj</th>
+                    <th>X</th><th>Y</th><th>Z</th>
+                </tr>
+
+                <tr><td>1</td><td>0.98850978</td><td>0.00013196</td><td>-0.00012164</td></tr>
+                <tr><td>2</td><td>0.98789260</td><td>0.00008315</td><td>-0.00002641</td></tr>
+                <tr><td>3</td><td>0.98794447</td><td>0.00006360</td><td>0.00002762</td></tr>
+                <tr><td>4</td><td>0.98806514</td><td>-0.00000481</td><td>0.00000349</td></tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>Time History (Position)</h2>
+            <h3>x(t)</h3>
+            <iframe src="time_history_C_2.05_x.html" class="plot-container" style="height:400px;" frameborder="0"></iframe>
+            <h3>y(t)</h3>
+            <iframe src="time_history_C_2.05_y.html" class="plot-container" style="height:400px;" frameborder="0"></iframe>
+            <h3>z(t)</h3>
+            <iframe src="time_history_C_2.05_z.html" class="plot-container" style="height:400px;" frameborder="0"></iframe>
+        </div>
+
+        <div class="section">
+            <h2>Time History (Velocity)</h2>
+            <h3>vx(t)</h3>
+            <iframe src="time_history_C_2.05_vx.html" class="plot-container" style="height:400px;" frameborder="0"></iframe>
+            <h3>vy(t)</h3>
+            <iframe src="time_history_C_2.05_vy.html" class="plot-container" style="height:400px;" frameborder="0"></iframe>
+            <h3>vz(t)</h3>
+            <iframe src="time_history_C_2.05_vz.html" class="plot-container" style="height:400px;" frameborder="0"></iframe>
+        </div>
+
+    </div>
+</body>
+</html>
+

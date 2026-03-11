@@ -9,13 +9,15 @@ plotlyjs()
 include("ks_eom_auto.jl")
 
 # ===== Parameters =====
-num_trj = 8                          # 各Cでの軌道数
+num_trj = 10                         # 各Cでの軌道数
 mu = 0.01215058426994                # Earth-Moon system
-t_fin = 200pi
+t_fin = 20pi
 tspan = (t_fin, 0.0)
 
 # 計算するヤコビ定数のリスト
-C_list = [2.25, 2.50, 2.75, 2.90, 2.95, 3.00, 3.05, 3.10, 3.15]
+C_list = [2.0, 2.5, 3.0, 3.5]
+
+
 
 # 出力ディレクトリ
 output_dir = "trajectory_results"
@@ -38,7 +40,7 @@ for C in C_list
     for i in 1:num_trj
         v = randn(4)
         v_normalized = v / norm(v)
-        P = 8*mu * v_normalized
+        P = sqrt(8*mu) * v_normalized
         u0_list[i] = [0.0, 0.0, 0.0, 0.0, P[1], P[2], P[3], P[4]]
     end
 
@@ -49,10 +51,15 @@ for C in C_list
     solutions_t = Vector{Any}(undef, num_trj)
     xyz_initial = Vector{Vector{Float64}}(undef, num_trj)
 
+    # uの値が大きくなりすぎたら停止するコールバック
+    condition(u, t, integrator) = norm(u) > 2
+    affect!(integrator) = terminate!(integrator)
+    cb = DiscreteCallback(condition, affect!)
+
     for i in 1:num_trj
         prob = ODEProblem{true, DifferentialEquations.SciMLBase.FullSpecialize}(
             ks_eom_auto, u0_list[i], tspan, (mu, C))
-        sol = solve(prob, Vern9(), abstol=1e-12, reltol=1e-12)
+        sol = solve(prob, Vern9(), abstol=1e-12, reltol=1e-12, callback=cb)
         solutions[i] = sol
 
         # KS → Cartesian 変換（位置と速度）
@@ -96,12 +103,11 @@ for C in C_list
     )
 
     for i in 2:num_trj
-        plot3d!(plt, solutions_xyz[i][1, :], solutions_xyz[i][2, :], solutions_xyz[i][3, :],
-                lw=0.5)
+        plot3d!(plt, solutions_xyz[i][1, :], solutions_xyz[i][2, :], solutions_xyz[i][3, :], lw=0.5)
     end
 
     # 月の位置
-    plot3d!(plt, [1 - mu], [0.0], [0.0], seriestype=:scatter, markersize=5, color=:gray)
+    scatter3d!(plt, [1 - mu], [0.0], [0.0], markersize=0.5, color=:gray, label="Moon")
 
     # プロットをHTMLとして一時保存
     plot_filename = joinpath(output_dir, "plot_C_$(C).html")
