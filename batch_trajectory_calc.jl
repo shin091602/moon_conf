@@ -6,7 +6,7 @@ using Printf
 
 plotlyjs()
 
-include("ks_eom_auto.jl")
+include("src/ks_eom_auto.jl")
 
 # ===== Parameters =====
 num_trj = 10                         # 各Cでの軌道数
