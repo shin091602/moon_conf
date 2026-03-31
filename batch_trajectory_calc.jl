@@ -57,8 +57,7 @@ for C in C_list
     cb = DiscreteCallback(condition, affect!)
 
     for i in 1:num_trj
-        prob = ODEProblem{true, DifferentialEquations.SciMLBase.FullSpecialize}(
-            ks_eom_auto, u0_list[i], tspan, (mu, C))
+        prob = ODEProblem{true, DifferentialEquations.SciMLBase.FullSpecialize}(ks_eom_auto, u0_list[i], tspan, (mu, C))
         sol = solve(prob, Vern9(), abstol=1e-12, reltol=1e-12, callback=cb)
         solutions[i] = sol
 
