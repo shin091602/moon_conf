@@ -101,18 +101,13 @@ sol_newton = solve(prob_newton, Vern9(); reltol=1e-12, abstol=1e-12)
 xs = [u[1] for u in sol_newton.u]
 ys = [u[2] for u in sol_newton.u]
 zs = [u[3] for u in sol_newton.u]
-
 # プロット (2x2レイアウト: 3D + xy, yz, zx)
 p3d = plot3d(xs, ys, zs; label="orbit", lc=:blue, xlabel="x", ylabel="y", zlabel="z", title="3D")
 scatter!(p3d, [x_M2], [0.0], [0.0]; label="Moon",  ms=4, mc=:gray)
-
 pxy = plot(xs, ys; label="orbit", lc=:blue, xlabel="x", ylabel="y", title="xy", aspect_ratio=:equal)
 scatter!(pxy, [x_M2], [0.0]; label="Moon",  ms=4, mc=:gray)
-
 pyz = plot(ys, zs; label="orbit", lc=:blue, xlabel="y", ylabel="z", title="yz", aspect_ratio=:equal)
-
 pzx = plot(zs, xs; label="orbit", lc=:blue, xlabel="z", ylabel="x", title="zx", aspect_ratio=:equal)
-
 fig = plot(p3d, pxy, pyz, pzx; layout=(2, 2), size=(900, 800), plot_title="Halo Orbit with Newton Equation", titlefontsize=10, titlefontcolor=:black, titlefontfamily="sans-serif", titlefontweight=:bold)
 display(fig)
 mkpath("results/confirmation")
@@ -172,3 +167,5 @@ pzx_ext_ana = plot(zs_ext_ana, xs_ext_ana; label="orbit", lc=:orange, xlabel="z"
 fig_ext_ana = plot(p3d_ext_ana, pxy_ext_ana, pyz_ext_ana, pzx_ext_ana; layout=(2, 2), size=(900, 800), plot_title="Halo Orbit with Extended Hamiltonian Equation (Analytical)", titlefontsize=10, titlefontcolor=:black, titlefontfamily="sans-serif", titlefontweight=:bold)
 display(fig_ext_ana)
 savefig(fig_ext_ana, "results/confirmation/orbit_extended_h_ana.png")  
+
+# 以上のプロットを比較して、ハミルトン形式で記述した運動方程式がニュートン形式と一致することを確認する。
