@@ -1,0 +1,3383 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025/Homebrew) (preloaded format=pdflatex 2025.11.7)  15 APR 2026 08:55
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**report_backprop_multi.tex # 目次リンクのため2回
+(./report_backprop_multi.tex
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/base/articl
+e.cls
+Document Class: article 2024/06/29 v1.4n Standard LaTeX document class
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/base/size11
+.clo
+File: size11.clo 2024/06/29 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count196
+\c@section=\count197
+\c@subsection=\count198
+\c@subsubsection=\count199
+\c@paragraph=\count266
+\c@subparagraph=\count267
+\c@figure=\count268
+\c@table=\count269
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/geometry/ge
+ometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/graphics/ke
+yval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/generic/iftex/ifv
+tex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/generic/iftex/ift
+ex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+))
+\Gm@cnth=\count270
+\Gm@cntv=\count271
+\c@Gm@tempcnt=\count272
+\Gm@bindingoffset=\dimen142
+\Gm@wd@mp=\dimen143
+\Gm@odd@mp=\dimen144
+\Gm@even@mp=\dimen145
+\Gm@layoutwidth=\dimen146
+\Gm@layoutheight=\dimen147
+\Gm@layouthoffset=\dimen148
+\Gm@layoutvoffset=\dimen149
+\Gm@dimlist=\toks18
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/base/fonten
+c.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/base/inpute
+nc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/lm/lmodern.
+sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/graphics/gr
+aphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/graphics/gr
+aphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/graphics/tr
+ig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/graphics-cf
+g/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/graphics-de
+f/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/caption/sub
+caption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/caption/cap
+tion.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/caption/cap
+tion3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen152
+\captionmargin=\dimen153
+\caption@leftmargin=\dimen154
+\caption@rightmargin=\dimen155
+\caption@width=\dimen156
+\caption@indent=\dimen157
+\caption@parindent=\dimen158
+\caption@hangindent=\dimen159
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count273
+\c@continuedfloat=\count274
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count275
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count276
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/amsmath/ams
+math.sty
+Package: amsmath 2024/11/05 v2.17t AMS math features
+\@mathmargin=\skip51
+
+For additional information on amsmath, use the `?' option.
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/amsmath/ams
+text.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/amsmath/ams
+gen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks21
+\ex@=\dimen160
+))
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/amsmath/ams
+bsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen161
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/amsmath/ams
+opn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count277
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count278
+\leftroot@=\count279
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count280
+\DOTSCASE@=\count281
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen162
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count282
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count283
+\dotsspace@=\muskip17
+\c@parentequation=\count284
+\dspbrk@lvl=\count285
+\tag@help=\toks22
+\row@=\count286
+\column@=\count287
+\maxfields@=\count288
+\andhelp@=\toks23
+\eqnshift@=\dimen163
+\alignsep@=\dimen164
+\tagshift@=\dimen165
+\tagwidth@=\dimen166
+\totwidth@=\dimen167
+\lineht@=\dimen168
+\@envbody=\toks24
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/amsfonts/am
+ssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/amsfonts/am
+sfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/booktabs/bo
+oktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen169
+\lightrulewidth=\dimen170
+\cmidrulewidth=\dimen171
+\belowrulesep=\dimen172
+\belowbottomsep=\dimen173
+\aboverulesep=\dimen174
+\abovetopsep=\dimen175
+\cmidrulesep=\dimen176
+\cmidrulekern=\dimen177
+\defaultaddspace=\dimen178
+\@cmidla=\count289
+\@cmidlb=\count290
+\@aboverulesep=\dimen179
+\@belowrulesep=\dimen180
+\@thisruleclass=\count291
+\@lastruleclass=\count292
+\@thisrulewidth=\dimen181
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/float/float
+.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count293
+\float@exts=\toks26
+\float@box=\box54
+\@float@everytoks=\toks27
+\@floatcapt=\box55
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/hyperref/hy
+perref.sty
+Package: hyperref 2024-11-05 v7.01l Hypertext links for LaTeX
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/kvsetkeys/k
+vsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/generic/kvdefinek
+eys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/generic/pdfescape
+/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/generic/ltxcmds/l
+txcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/generic/pdftexcmd
+s/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/generic/infwarerr
+/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/hycolor/hyc
+olor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/hyperref/na
+meref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/refcount/re
+fcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/generic/gettitles
+tring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/kvoptions/k
+voptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count294
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/etoolbox/et
+oolbox.sty
+Package: etoolbox 2025/02/11 v2.5l e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count295
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/generic/stringenc
+/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen182
+\Hy@linkcounter=\count296
+\Hy@pagecounter=\count297
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/hyperref/pd
+1enc.def
+File: pd1enc.def 2024-11-05 v7.01l Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/generic/intcalc/i
+ntcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count298
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/hyperref/pu
+enc.def
+File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4157.
+Package hyperref Info: Link nesting OFF on input line 4162.
+Package hyperref Info: Hyper index ON on input line 4165.
+Package hyperref Info: Plain pages OFF on input line 4172.
+Package hyperref Info: Backreferencing OFF on input line 4177.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4424.
+\c@Hy@tempcnt=\count299
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip18
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4763.
+\XeTeXLinkMargin=\dimen183
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/generic/bitset/bi
+tset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/generic/bigintcal
+c/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count300
+\Field@Width=\dimen184
+\Fld@charsize=\dimen185
+Package hyperref Info: Hyper figures OFF on input line 6042.
+Package hyperref Info: Link nesting OFF on input line 6047.
+Package hyperref Info: Hyper index ON on input line 6050.
+Package hyperref Info: backreferencing OFF on input line 6057.
+Package hyperref Info: Link coloring OFF on input line 6062.
+Package hyperref Info: Link coloring with OCG OFF on input line 6067.
+Package hyperref Info: PDF/A mode OFF on input line 6072.
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/base/atbegs
+hi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count301
+\c@Item=\count302
+\c@Hfootnote=\count303
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/hyperref/hp
+dftex.def
+File: hpdftex.def 2024-11-05 v7.01l Hyperref driver for pdfTeX
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/base/atvery
+end-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count304
+\c@bookmark@seq@number=\count305
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/rerunfilech
+eck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/generic/uniquecou
+nter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip54
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/parskip/par
+skip.sty
+Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+)
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 30
+.
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/l3backend/l
+3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count306
+\l__pdf_internal_box=\box56
+) (./report_backprop_multi.aux)
+\openout1 = `report_backprop_multi.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(62.59605pt, 472.31577pt, 62.59605pt)
+* v-part:(T,H,B)=(62.59605pt, 719.85474pt, 62.59605pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=472.31577pt
+* \textheight=719.85474pt
+* \oddsidemargin=-9.67393pt
+* \evensidemargin=-9.67393pt
+* \topmargin=-46.67393pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=50.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/context/base/mkii
+/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count307
+\scratchdimen=\dimen186
+\scratchbox=\box57
+\nofMPsegments=\count308
+\nofMParguments=\count309
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count310
+\MPscratchDim=\dimen187
+\MPnumerator=\count311
+\makeMPintoPDFobject=\count312
+\everyMPtoPDFconversion=\toks29
+)
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/epstopdf-pk
+g/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/latexconfig
+/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring OFF on input line 30.
+ (./report_backprop_multi.out) (./report_backprop_multi.out)
+\@outlinefile=\write3
+\openout3 = `report_backprop_multi.out'.
+
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
+2.
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/lm/ot1lmr.f
+d
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
+2.
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/lm/omllmm.f
+d
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+32.
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/lm/omslmsy.
+fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+32.
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/lm/omxlmex.
+fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 32.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 32.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
+
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/amsfonts/um
+sa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
+
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/amsfonts/um
+sb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (./report_backprop_multi.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 3.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 4.
+
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4
+.
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/lm/ts1lmr.f
+d
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 4.
+
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
+.
+
+(/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/tex/latex/lm/t1lmtt.f
+d
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 4.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 5.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 5.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 6.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 6.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 7.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 8.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 8.
+
+)
+\tf@toc=\write4
+\openout4 = `report_backprop_multi.toc'.
+
+
+
+[1
+
+{/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/fonts/map/pdftex/updm
+ap/pdftex.map}{/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/fonts/e
+nc/dvips/lm/lm-ec.enc}{/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist
+/fonts/enc/dvips/lm/lm-mathit.enc}{/opt/homebrew/Cellar/texlive/20250308_2/shar
+e/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/opt/homebrew/Cellar/texlive/2025030
+8_2/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 98.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 98.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 99.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 99.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 100.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 100.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 101.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 101.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 102.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 102.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 108.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 108.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 108.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 108.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 108.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 108.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 108.
+
+
+
+[2
+
+{/opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/fonts/enc/dvips/lm/lm
+-mathex.enc}]
+
+[3]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 152.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 152.
+
+LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 152.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 1.82538pt
+(hyperref)                removed on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@nomath' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\setbox' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\thinmuskip' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\medmuskip' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\m@ne' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\thickmuskip' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ne' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\setbox' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\tw@' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathchoice' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\displaystyle' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\textstyle' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\scriptstyle' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\scriptscriptstyle' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\endgroup' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\theta' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 152.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 152.
+
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_01_orbit.pdf, id=83, 521.95pt x 
+461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_01_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_01_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_01_orbit
+.pdf  used on input line 161.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_01_sphere.pdf, id=84, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_01_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_01_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_01_spher
+e.pdf  used on input line 165.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_02_orbit.pdf, id=85, 521.95pt x 
+461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_02_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_02_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_02_orbit
+.pdf  used on input line 175.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_02_sphere.pdf, id=86, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_02_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_02_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_02_spher
+e.pdf  used on input line 179.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_03_orbit.pdf, id=87, 521.95pt x 
+461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_03_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_03_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_03_orbit
+.pdf  used on input line 189.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_03_sphere.pdf, id=88, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_03_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_03_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_03_spher
+e.pdf  used on input line 193.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[4
+
+ <./results/pdf/backprop_multi/C_2.9/w4_p087/traj_01_orbit.pdf> <./results/pdf/
+backprop_multi/C_2.9/w4_p087/traj_01_sphere.pdf> <./results/pdf/backprop_multi/
+C_2.9/w4_p087/traj_02_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p087/tr
+aj_02_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_04_orbit.pdf, id=99, 521.95pt x 
+461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_04_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_04_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_04_orbit
+.pdf  used on input line 203.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_04_sphere.pdf, id=100, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_04_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_04_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_04_spher
+e.pdf  used on input line 207.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_05_orbit.pdf, id=101, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_05_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_05_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_05_orbit
+.pdf  used on input line 217.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_05_sphere.pdf, id=102, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_05_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_05_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_05_spher
+e.pdf  used on input line 221.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[5 <./results/pdf/backprop_multi/C_2.9/w4_p087/traj_03_orbit.pdf> <./results/pd
+f/backprop_multi/C_2.9/w4_p087/traj_03_sphere.pdf> <./results/pdf/backprop_mult
+i/C_2.9/w4_p087/traj_04_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p087/
+traj_04_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_06_orbit.pdf, id=113, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_06_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_06_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_06_orbit
+.pdf  used on input line 231.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_06_sphere.pdf, id=114, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_06_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_06_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_06_spher
+e.pdf  used on input line 235.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_07_orbit.pdf, id=115, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_07_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_07_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_07_orbit
+.pdf  used on input line 245.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_07_sphere.pdf, id=116, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_07_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_07_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_07_spher
+e.pdf  used on input line 249.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[6 <./results/pdf/backprop_multi/C_2.9/w4_p087/traj_05_orbit.pdf> <./results/pd
+f/backprop_multi/C_2.9/w4_p087/traj_05_sphere.pdf> <./results/pdf/backprop_mult
+i/C_2.9/w4_p087/traj_06_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p087/
+traj_06_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_08_orbit.pdf, id=127, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_08_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_08_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_08_orbit
+.pdf  used on input line 259.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_08_sphere.pdf, id=128, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_08_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_08_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_08_spher
+e.pdf  used on input line 263.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_09_orbit.pdf, id=129, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_09_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_09_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_09_orbit
+.pdf  used on input line 273.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_09_sphere.pdf, id=130, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_09_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_09_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_09_spher
+e.pdf  used on input line 277.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[7 <./results/pdf/backprop_multi/C_2.9/w4_p087/traj_07_orbit.pdf> <./results/pd
+f/backprop_multi/C_2.9/w4_p087/traj_07_sphere.pdf> <./results/pdf/backprop_mult
+i/C_2.9/w4_p087/traj_08_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p087/
+traj_08_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_10_orbit.pdf, id=142, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_10_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_10_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_10_orbit
+.pdf  used on input line 287.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_10_sphere.pdf, id=143, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_10_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_10_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_10_spher
+e.pdf  used on input line 291.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_11_orbit.pdf, id=144, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_11_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_11_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_11_orbit
+.pdf  used on input line 301.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_11_sphere.pdf, id=145, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_11_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_11_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_11_spher
+e.pdf  used on input line 305.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[8 <./results/pdf/backprop_multi/C_2.9/w4_p087/traj_09_orbit.pdf> <./results/pd
+f/backprop_multi/C_2.9/w4_p087/traj_09_sphere.pdf> <./results/pdf/backprop_mult
+i/C_2.9/w4_p087/traj_10_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p087/
+traj_10_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_12_orbit.pdf, id=156, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_12_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_12_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_12_orbit
+.pdf  used on input line 315.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_12_sphere.pdf, id=157, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_12_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_12_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_12_spher
+e.pdf  used on input line 319.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_13_orbit.pdf, id=158, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_13_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_13_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_13_orbit
+.pdf  used on input line 329.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_13_sphere.pdf, id=159, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_13_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_13_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_13_spher
+e.pdf  used on input line 333.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[9 <./results/pdf/backprop_multi/C_2.9/w4_p087/traj_11_orbit.pdf> <./results/pd
+f/backprop_multi/C_2.9/w4_p087/traj_11_sphere.pdf> <./results/pdf/backprop_mult
+i/C_2.9/w4_p087/traj_12_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p087/
+traj_12_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_14_orbit.pdf, id=170, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_14_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_14_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_14_orbit
+.pdf  used on input line 343.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p087/traj_14_sphere.pdf, id=171, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p087/traj_14_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p087/traj_14_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p087/traj_14_spher
+e.pdf  used on input line 347.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[10 <./results/pdf/backprop_multi/C_2.9/w4_p087/traj_13_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_p087/traj_13_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_p087/traj_14_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p087
+/traj_14_sphere.pdf>]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 358.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 1.82538pt
+(hyperref)                removed on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@nomath' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\setbox' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\thinmuskip' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\medmuskip' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\m@ne' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\thickmuskip' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ne' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\setbox' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\tw@' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathchoice' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\displaystyle' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\textstyle' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\scriptstyle' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\scriptscriptstyle' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\endgroup' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\theta' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 358.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 358.
+
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_01_orbit.pdf, id=183, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_01_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_01_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_01_orbit
+.pdf  used on input line 367.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_01_sphere.pdf, id=184, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_01_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_01_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_01_spher
+e.pdf  used on input line 371.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_02_orbit.pdf, id=185, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_02_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_02_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_02_orbit
+.pdf  used on input line 381.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_02_sphere.pdf, id=186, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_02_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_02_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_02_spher
+e.pdf  used on input line 385.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_03_orbit.pdf, id=187, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_03_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_03_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_03_orbit
+.pdf  used on input line 395.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_03_sphere.pdf, id=188, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_03_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_03_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_03_spher
+e.pdf  used on input line 399.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[11
+
+ <./results/pdf/backprop_multi/C_2.9/w4_p050/traj_01_orbit.pdf> <./results/pdf/
+backprop_multi/C_2.9/w4_p050/traj_01_sphere.pdf> <./results/pdf/backprop_multi/
+C_2.9/w4_p050/traj_02_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p050/tr
+aj_02_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_04_orbit.pdf, id=199, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_04_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_04_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_04_orbit
+.pdf  used on input line 409.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_04_sphere.pdf, id=200, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_04_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_04_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_04_spher
+e.pdf  used on input line 413.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_05_orbit.pdf, id=201, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_05_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_05_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_05_orbit
+.pdf  used on input line 423.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_05_sphere.pdf, id=202, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_05_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_05_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_05_spher
+e.pdf  used on input line 427.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[12 <./results/pdf/backprop_multi/C_2.9/w4_p050/traj_03_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_p050/traj_03_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_p050/traj_04_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p050
+/traj_04_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_06_orbit.pdf, id=213, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_06_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_06_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_06_orbit
+.pdf  used on input line 437.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_06_sphere.pdf, id=214, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_06_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_06_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_06_spher
+e.pdf  used on input line 441.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_07_orbit.pdf, id=215, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_07_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_07_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_07_orbit
+.pdf  used on input line 451.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_07_sphere.pdf, id=216, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_07_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_07_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_07_spher
+e.pdf  used on input line 455.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[13 <./results/pdf/backprop_multi/C_2.9/w4_p050/traj_05_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_p050/traj_05_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_p050/traj_06_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p050
+/traj_06_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_08_orbit.pdf, id=228, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_08_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_08_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_08_orbit
+.pdf  used on input line 465.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_08_sphere.pdf, id=229, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_08_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_08_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_08_spher
+e.pdf  used on input line 469.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_09_orbit.pdf, id=230, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_09_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_09_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_09_orbit
+.pdf  used on input line 479.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_09_sphere.pdf, id=231, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_09_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_09_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_09_spher
+e.pdf  used on input line 483.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[14 <./results/pdf/backprop_multi/C_2.9/w4_p050/traj_07_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_p050/traj_07_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_p050/traj_08_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p050
+/traj_08_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_10_orbit.pdf, id=242, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_10_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_10_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_10_orbit
+.pdf  used on input line 493.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_10_sphere.pdf, id=243, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_10_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_10_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_10_spher
+e.pdf  used on input line 497.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_11_orbit.pdf, id=244, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_11_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_11_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_11_orbit
+.pdf  used on input line 507.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_11_sphere.pdf, id=245, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_11_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_11_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_11_spher
+e.pdf  used on input line 511.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[15 <./results/pdf/backprop_multi/C_2.9/w4_p050/traj_09_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_p050/traj_09_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_p050/traj_10_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p050
+/traj_10_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_12_orbit.pdf, id=256, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_12_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_12_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_12_orbit
+.pdf  used on input line 521.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_12_sphere.pdf, id=257, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_12_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_12_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_12_spher
+e.pdf  used on input line 525.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_13_orbit.pdf, id=258, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_13_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_13_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_13_orbit
+.pdf  used on input line 535.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_13_sphere.pdf, id=259, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_13_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_13_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_13_spher
+e.pdf  used on input line 539.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[16 <./results/pdf/backprop_multi/C_2.9/w4_p050/traj_11_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_p050/traj_11_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_p050/traj_12_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p050
+/traj_12_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_14_orbit.pdf, id=270, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_14_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_14_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_14_orbit
+.pdf  used on input line 549.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p050/traj_14_sphere.pdf, id=271, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p050/traj_14_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p050/traj_14_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p050/traj_14_spher
+e.pdf  used on input line 553.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[17 <./results/pdf/backprop_multi/C_2.9/w4_p050/traj_13_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_p050/traj_13_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_p050/traj_14_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p050
+/traj_14_sphere.pdf>]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 564.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 1.82538pt
+(hyperref)                removed on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@nomath' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\setbox' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\thinmuskip' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\medmuskip' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\m@ne' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\thickmuskip' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ne' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\setbox' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\tw@' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathchoice' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\displaystyle' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\textstyle' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\scriptstyle' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\scriptscriptstyle' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\endgroup' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\theta' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 564.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 564.
+
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_01_orbit.pdf, id=282, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_01_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_01_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_01_orbit
+.pdf  used on input line 573.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_01_sphere.pdf, id=283, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_01_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_01_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_01_spher
+e.pdf  used on input line 577.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_02_orbit.pdf, id=284, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_02_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_02_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_02_orbit
+.pdf  used on input line 587.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_02_sphere.pdf, id=285, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_02_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_02_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_02_spher
+e.pdf  used on input line 591.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_03_orbit.pdf, id=286, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_03_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_03_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_03_orbit
+.pdf  used on input line 601.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_03_sphere.pdf, id=287, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_03_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_03_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_03_spher
+e.pdf  used on input line 605.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[18
+
+ <./results/pdf/backprop_multi/C_2.9/w4_p000/traj_01_orbit.pdf> <./results/pdf/
+backprop_multi/C_2.9/w4_p000/traj_01_sphere.pdf> <./results/pdf/backprop_multi/
+C_2.9/w4_p000/traj_02_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p000/tr
+aj_02_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_04_orbit.pdf, id=298, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_04_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_04_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_04_orbit
+.pdf  used on input line 615.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_04_sphere.pdf, id=299, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_04_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_04_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_04_spher
+e.pdf  used on input line 619.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_05_orbit.pdf, id=300, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_05_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_05_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_05_orbit
+.pdf  used on input line 629.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_05_sphere.pdf, id=301, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_05_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_05_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_05_spher
+e.pdf  used on input line 633.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[19 <./results/pdf/backprop_multi/C_2.9/w4_p000/traj_03_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_p000/traj_03_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_p000/traj_04_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p000
+/traj_04_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_06_orbit.pdf, id=313, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_06_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_06_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_06_orbit
+.pdf  used on input line 643.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_06_sphere.pdf, id=314, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_06_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_06_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_06_spher
+e.pdf  used on input line 647.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_07_orbit.pdf, id=315, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_07_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_07_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_07_orbit
+.pdf  used on input line 657.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_07_sphere.pdf, id=316, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_07_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_07_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_07_spher
+e.pdf  used on input line 661.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[20 <./results/pdf/backprop_multi/C_2.9/w4_p000/traj_05_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_p000/traj_05_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_p000/traj_06_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p000
+/traj_06_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_08_orbit.pdf, id=328, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_08_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_08_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_08_orbit
+.pdf  used on input line 671.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_08_sphere.pdf, id=329, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_08_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_08_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_08_spher
+e.pdf  used on input line 675.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_09_orbit.pdf, id=330, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_09_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_09_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_09_orbit
+.pdf  used on input line 685.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_09_sphere.pdf, id=331, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_09_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_09_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_09_spher
+e.pdf  used on input line 689.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[21 <./results/pdf/backprop_multi/C_2.9/w4_p000/traj_07_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_p000/traj_07_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_p000/traj_08_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p000
+/traj_08_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_10_orbit.pdf, id=342, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_10_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_10_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_10_orbit
+.pdf  used on input line 699.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_10_sphere.pdf, id=343, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_10_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_10_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_10_spher
+e.pdf  used on input line 703.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_11_orbit.pdf, id=344, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_11_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_11_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_11_orbit
+.pdf  used on input line 713.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_11_sphere.pdf, id=345, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_11_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_11_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_11_spher
+e.pdf  used on input line 717.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[22 <./results/pdf/backprop_multi/C_2.9/w4_p000/traj_09_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_p000/traj_09_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_p000/traj_10_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p000
+/traj_10_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_12_orbit.pdf, id=356, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_12_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_12_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_12_orbit
+.pdf  used on input line 727.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_12_sphere.pdf, id=357, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_12_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_12_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_12_spher
+e.pdf  used on input line 731.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_13_orbit.pdf, id=358, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_13_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_13_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_13_orbit
+.pdf  used on input line 741.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_13_sphere.pdf, id=359, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_13_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_13_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_13_spher
+e.pdf  used on input line 745.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[23 <./results/pdf/backprop_multi/C_2.9/w4_p000/traj_11_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_p000/traj_11_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_p000/traj_12_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p000
+/traj_12_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_14_orbit.pdf, id=370, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_14_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_14_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_14_orbit
+.pdf  used on input line 755.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_p000/traj_14_sphere.pdf, id=371, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_p000/traj_14_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_p000/traj_14_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_p000/traj_14_spher
+e.pdf  used on input line 759.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[24 <./results/pdf/backprop_multi/C_2.9/w4_p000/traj_13_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_p000/traj_13_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_p000/traj_14_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_p000
+/traj_14_sphere.pdf>]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 770.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 1.82538pt
+(hyperref)                removed on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@nomath' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\setbox' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\thinmuskip' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\medmuskip' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\m@ne' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\thickmuskip' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ne' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\setbox' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\tw@' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathchoice' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\displaystyle' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\textstyle' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\scriptstyle' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\scriptscriptstyle' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\endgroup' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\theta' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 770.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 770.
+
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_01_orbit.pdf, id=382, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_01_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_01_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_01_orbit
+.pdf  used on input line 779.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_01_sphere.pdf, id=383, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_01_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_01_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_01_spher
+e.pdf  used on input line 783.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_02_orbit.pdf, id=384, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_02_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_02_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_02_orbit
+.pdf  used on input line 793.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_02_sphere.pdf, id=385, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_02_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_02_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_02_spher
+e.pdf  used on input line 797.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_03_orbit.pdf, id=386, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_03_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_03_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_03_orbit
+.pdf  used on input line 807.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_03_sphere.pdf, id=387, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_03_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_03_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_03_spher
+e.pdf  used on input line 811.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[25
+
+ <./results/pdf/backprop_multi/C_2.9/w4_m050/traj_01_orbit.pdf> <./results/pdf/
+backprop_multi/C_2.9/w4_m050/traj_01_sphere.pdf> <./results/pdf/backprop_multi/
+C_2.9/w4_m050/traj_02_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_m050/tr
+aj_02_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_04_orbit.pdf, id=399, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_04_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_04_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_04_orbit
+.pdf  used on input line 821.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_04_sphere.pdf, id=400, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_04_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_04_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_04_spher
+e.pdf  used on input line 825.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_05_orbit.pdf, id=401, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_05_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_05_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_05_orbit
+.pdf  used on input line 835.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_05_sphere.pdf, id=402, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_05_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_05_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_05_spher
+e.pdf  used on input line 839.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[26 <./results/pdf/backprop_multi/C_2.9/w4_m050/traj_03_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_m050/traj_03_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_m050/traj_04_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_m050
+/traj_04_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_06_orbit.pdf, id=413, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_06_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_06_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_06_orbit
+.pdf  used on input line 849.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_06_sphere.pdf, id=414, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_06_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_06_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_06_spher
+e.pdf  used on input line 853.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_07_orbit.pdf, id=415, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_07_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_07_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_07_orbit
+.pdf  used on input line 863.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_07_sphere.pdf, id=416, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_07_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_07_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_07_spher
+e.pdf  used on input line 867.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[27 <./results/pdf/backprop_multi/C_2.9/w4_m050/traj_05_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_m050/traj_05_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_m050/traj_06_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_m050
+/traj_06_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_08_orbit.pdf, id=427, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_08_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_08_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_08_orbit
+.pdf  used on input line 877.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_08_sphere.pdf, id=428, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_08_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_08_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_08_spher
+e.pdf  used on input line 881.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_09_orbit.pdf, id=429, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_09_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_09_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_09_orbit
+.pdf  used on input line 891.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_09_sphere.pdf, id=430, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_09_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_09_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_09_spher
+e.pdf  used on input line 895.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[28 <./results/pdf/backprop_multi/C_2.9/w4_m050/traj_07_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_m050/traj_07_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_m050/traj_08_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_m050
+/traj_08_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_10_orbit.pdf, id=441, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_10_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_10_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_10_orbit
+.pdf  used on input line 905.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_10_sphere.pdf, id=442, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_10_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_10_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_10_spher
+e.pdf  used on input line 909.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_11_orbit.pdf, id=443, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_11_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_11_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_11_orbit
+.pdf  used on input line 919.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_11_sphere.pdf, id=444, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_11_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_11_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_11_spher
+e.pdf  used on input line 923.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[29 <./results/pdf/backprop_multi/C_2.9/w4_m050/traj_09_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_m050/traj_09_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_m050/traj_10_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_m050
+/traj_10_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_12_orbit.pdf, id=455, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_12_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_12_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_12_orbit
+.pdf  used on input line 933.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_12_sphere.pdf, id=456, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_12_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_12_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_12_spher
+e.pdf  used on input line 937.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_13_orbit.pdf, id=457, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_13_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_13_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_13_orbit
+.pdf  used on input line 947.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_13_sphere.pdf, id=458, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_13_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_13_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_13_spher
+e.pdf  used on input line 951.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[30 <./results/pdf/backprop_multi/C_2.9/w4_m050/traj_11_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_m050/traj_11_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_m050/traj_12_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_m050
+/traj_12_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_14_orbit.pdf, id=469, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_14_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_14_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_14_orbit
+.pdf  used on input line 961.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m050/traj_14_sphere.pdf, id=470, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m050/traj_14_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m050/traj_14_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m050/traj_14_spher
+e.pdf  used on input line 965.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[31 <./results/pdf/backprop_multi/C_2.9/w4_m050/traj_13_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_m050/traj_13_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_m050/traj_14_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_m050
+/traj_14_sphere.pdf>]
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 976.
+
+
+LaTeX Warning: Command \textdegree invalid in math mode on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 1.82538pt
+(hyperref)                removed on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<let>-command' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@nomath' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\setbox' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\thinmuskip' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\medmuskip' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\m@ne' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\thickmuskip' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@ne' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\setbox' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\tw@' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\<def>-command' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathchoice' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\displaystyle' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\textstyle' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\scriptstyle' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\hbox' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mathsurround' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\z@' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\scriptscriptstyle' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\endgroup' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\theta' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 976.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 10.95pt
+(hyperref)                replaced by space on input line 976.
+
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_01_orbit.pdf, id=483, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_01_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_01_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_01_orbit
+.pdf  used on input line 985.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_01_sphere.pdf, id=484, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_01_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_01_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_01_spher
+e.pdf  used on input line 989.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_02_orbit.pdf, id=485, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_02_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_02_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_02_orbit
+.pdf  used on input line 999.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_02_sphere.pdf, id=486, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_02_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_02_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_02_spher
+e.pdf  used on input line 1003.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_03_orbit.pdf, id=487, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_03_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_03_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_03_orbit
+.pdf  used on input line 1013.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_03_sphere.pdf, id=488, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_03_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_03_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_03_spher
+e.pdf  used on input line 1017.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[32
+
+ <./results/pdf/backprop_multi/C_2.9/w4_m087/traj_01_orbit.pdf> <./results/pdf/
+backprop_multi/C_2.9/w4_m087/traj_01_sphere.pdf> <./results/pdf/backprop_multi/
+C_2.9/w4_m087/traj_02_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_m087/tr
+aj_02_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_04_orbit.pdf, id=499, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_04_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_04_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_04_orbit
+.pdf  used on input line 1027.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_04_sphere.pdf, id=500, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_04_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_04_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_04_spher
+e.pdf  used on input line 1031.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_05_orbit.pdf, id=501, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_05_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_05_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_05_orbit
+.pdf  used on input line 1041.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_05_sphere.pdf, id=502, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_05_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_05_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_05_spher
+e.pdf  used on input line 1045.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[33 <./results/pdf/backprop_multi/C_2.9/w4_m087/traj_03_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_m087/traj_03_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_m087/traj_04_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_m087
+/traj_04_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_06_orbit.pdf, id=513, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_06_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_06_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_06_orbit
+.pdf  used on input line 1055.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_06_sphere.pdf, id=514, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_06_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_06_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_06_spher
+e.pdf  used on input line 1059.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_07_orbit.pdf, id=515, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_07_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_07_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_07_orbit
+.pdf  used on input line 1069.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_07_sphere.pdf, id=516, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_07_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_07_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_07_spher
+e.pdf  used on input line 1073.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[34 <./results/pdf/backprop_multi/C_2.9/w4_m087/traj_05_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_m087/traj_05_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_m087/traj_06_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_m087
+/traj_06_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_08_orbit.pdf, id=527, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_08_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_08_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_08_orbit
+.pdf  used on input line 1083.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_08_sphere.pdf, id=528, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_08_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_08_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_08_spher
+e.pdf  used on input line 1087.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_09_orbit.pdf, id=529, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_09_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_09_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_09_orbit
+.pdf  used on input line 1097.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_09_sphere.pdf, id=530, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_09_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_09_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_09_spher
+e.pdf  used on input line 1101.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[35 <./results/pdf/backprop_multi/C_2.9/w4_m087/traj_07_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_m087/traj_07_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_m087/traj_08_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_m087
+/traj_08_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_10_orbit.pdf, id=541, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_10_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_10_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_10_orbit
+.pdf  used on input line 1111.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_10_sphere.pdf, id=542, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_10_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_10_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_10_spher
+e.pdf  used on input line 1115.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_11_orbit.pdf, id=543, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_11_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_11_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_11_orbit
+.pdf  used on input line 1125.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_11_sphere.pdf, id=544, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_11_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_11_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_11_spher
+e.pdf  used on input line 1129.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[36 <./results/pdf/backprop_multi/C_2.9/w4_m087/traj_09_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_m087/traj_09_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_m087/traj_10_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_m087
+/traj_10_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_12_orbit.pdf, id=555, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_12_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_12_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_12_orbit
+.pdf  used on input line 1139.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_12_sphere.pdf, id=556, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_12_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_12_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_12_spher
+e.pdf  used on input line 1143.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_13_orbit.pdf, id=557, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_13_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_13_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_13_orbit
+.pdf  used on input line 1153.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_13_sphere.pdf, id=558, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_13_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_13_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_13_spher
+e.pdf  used on input line 1157.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[37 <./results/pdf/backprop_multi/C_2.9/w4_m087/traj_11_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_m087/traj_11_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_m087/traj_12_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_m087
+/traj_12_sphere.pdf>]
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_14_orbit.pdf, id=570, 521.95pt x
+ 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_14_orbit.pdf Graphic file (
+type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_14_orbit.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_14_orbit
+.pdf  used on input line 1167.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+<results/pdf/backprop_multi/C_2.9/w4_m087/traj_14_sphere.pdf, id=571, 521.95pt 
+x 461.725pt>
+File: results/pdf/backprop_multi/C_2.9/w4_m087/traj_14_sphere.pdf Graphic file 
+(type pdf)
+<use results/pdf/backprop_multi/C_2.9/w4_m087/traj_14_sphere.pdf>
+Package pdftex.def Info: results/pdf/backprop_multi/C_2.9/w4_m087/traj_14_spher
+e.pdf  used on input line 1171.
+(pdftex.def)             Requested size: 226.70955pt x 200.55284pt.
+
+
+[38 <./results/pdf/backprop_multi/C_2.9/w4_m087/traj_13_orbit.pdf> <./results/p
+df/backprop_multi/C_2.9/w4_m087/traj_13_sphere.pdf> <./results/pdf/backprop_mul
+ti/C_2.9/w4_m087/traj_14_orbit.pdf> <./results/pdf/backprop_multi/C_2.9/w4_m087
+/traj_14_sphere.pdf>] (./report_backprop_multi.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+Package rerunfilecheck Info: File `report_backprop_multi.out' has not changed.
+(rerunfilecheck)             Checksum: 711564813E5A4B82378D27B5F2AAE7A5;2414.
+ ) 
+Here is how much of TeX's memory you used:
+ 13652 strings out of 473190
+ 274946 string characters out of 5704335
+ 596787 words of memory out of 5000000
+ 36594 multiletter control sequences out of 15000+600000
+ 643153 words of font info for 108 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 75i,15n,79p,545b,532s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/fonts/type1/public/
+lm/lmbx10.pfb></opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/fonts/t
+ype1/public/lm/lmbx12.pfb></opt/homebrew/Cellar/texlive/20250308_2/share/texmf-
+dist/fonts/type1/public/lm/lmex10.pfb></opt/homebrew/Cellar/texlive/20250308_2/
+share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></opt/homebrew/Cellar/texlive
+/20250308_2/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></opt/homebrew/Ce
+llar/texlive/20250308_2/share/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></op
+t/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/fonts/type1/public/lm/lmr
+10.pfb></opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/fonts/type1/pu
+blic/lm/lmr12.pfb></opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/fon
+ts/type1/public/lm/lmr17.pfb></opt/homebrew/Cellar/texlive/20250308_2/share/tex
+mf-dist/fonts/type1/public/lm/lmr8.pfb></opt/homebrew/Cellar/texlive/20250308_2
+/share/texmf-dist/fonts/type1/public/lm/lmri10.pfb></opt/homebrew/Cellar/texliv
+e/20250308_2/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></opt/homebrew/C
+ellar/texlive/20250308_2/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></opt
+/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/fonts/type1/public/lm/lmtk
+10.pfb></opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/fonts/type1/pu
+blic/lm/lmtt10.pfb></opt/homebrew/Cellar/texlive/20250308_2/share/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on report_backprop_multi.pdf (38 pages, 17494932 bytes).
+PDF statistics:
+ 691 PDF objects out of 1000 (max. 8388607)
+ 471 compressed objects within 5 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 765 words of extra memory for PDF output out of 10000 (max. 10000000)
+

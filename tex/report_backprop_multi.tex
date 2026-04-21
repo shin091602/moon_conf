@@ -1,0 +1,1177 @@
+% ============================================================
+%  Backward Propagation Report  –  Earth-Moon CR3BP  (KS)
+%  C = 2.9
+% ============================================================
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[top=22mm,bottom=22mm,left=22mm,right=22mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{parskip}
+
+\graphicspath{{results/pdf/backprop_multi/C_2.9/}}
+
+% ---- title ------------------------------------------------
+\title{\textbf{Backward Propagation of Collision Orbits}\\[0.3em]
+  in the Earth--Moon Circular Restricted Three-Body Problem\\
+  via Kustaanheimo--Stiefel (KS) Regularization\\[0.8em]
+  \large Jacobi Constant $C = 2.9$}
+\author{}
+\date{\today}
+
+% ===========================================================
+\begin{document}
+\maketitle
+\tableofcontents
+\clearpage
+
+% -----------------------------------------------------------
+\section{Problem Setup}
+% -----------------------------------------------------------
+
+We consider the planar/spatial Earth--Moon Circular Restricted
+Three-Body Problem (CR3BP) with mass ratio
+$\mu = 1.215058 \times 10^{-2}$ (Earth--Moon system).
+Lunar collision orbits are propagated \emph{backward} in time
+starting from the Moon's position using the
+Kustaanheimo--Stiefel (KS) regularization, which removes
+the collision singularity at the secondary body.
+
+\subsection*{KS state vector}
+
+The KS transformation maps a 4-dimensional regularized position
+vector $\boldsymbol{u} = (u_1, u_2, u_3, u_4)^{\top}$ to
+the physical position $\boldsymbol{r} = (x, y, z)^{\top}$.
+The corresponding KS velocity is
+$\boldsymbol{w} = \dot{\boldsymbol{u}} = (w_1, w_2, w_3, w_4)^{\top}$.
+
+The energy constraint fixes the norm of $\boldsymbol{w}$:
+\[
+  |\boldsymbol{w}|^2 = 8\mu, \qquad
+  |\boldsymbol{w}| \approx 0.3118.
+\]
+
+The initial KS position is set to $\boldsymbol{u}(0) = \boldsymbol{0}$
+(Moon in KS space).  The fourth component $w_4$ is fixed to one of five
+discrete values (see Section~\ref{sec:params}), while
+$(w_1, w_2, w_3)$ is distributed over 14 directions on the sphere
+of radius $r_3 = \sqrt{|\boldsymbol{w}|^2 - w_4^2}$
+(see Section~\ref{sec:dirs}).
+
+% -----------------------------------------------------------
+\section{Computation Parameters}
+\label{sec:params}
+% -----------------------------------------------------------
+
+\begin{table}[H]
+  \centering
+  \caption{Fixed parameters}
+  \begin{tabular}{ll}
+    \toprule
+    Parameter & Value \\
+    \midrule
+    Mass ratio $\mu$ & $1.215058426994 \times 10^{-2}$ \\
+    Jacobi constant $C$ & $2.9$ \\
+    $|\boldsymbol{w}|$ & $\sqrt{8\mu} \approx 0.31178$ \\
+    Integration end (virtual time) & $\tau_{\mathrm{fin}} = 10\pi$ \\
+    Saved points per trajectory & $10{,}000$ \\
+    Integrator & Vern9 (abs.\,tol $= 10^{-12}$, rel.\,tol $= 10^{-12}$) \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{Five values of $w_4$ (polar angle $\theta$ in KS velocity space)}
+  \begin{tabular}{ccccc}
+    \toprule
+    Label & $\theta$ & $w_4$ & $w_4/|\boldsymbol{w}|$ (\%) &
+    $r_3 = \sqrt{|\boldsymbol{w}|^2 - w_4^2}$ \\
+    \midrule
+    \texttt{w4\_p087} & $30°$ & $+0.2700$ & $+87\%$ & $0.1559$ \\
+    \texttt{w4\_p050} & $60°$ & $+0.1559$ & $+50\%$ & $0.2700$ \\
+    \texttt{w4\_p000} & $90°$ & $\phantom{+}0.0000$ & $\phantom{+}0\%$ & $0.3118$ \\
+    \texttt{w4\_m050} & $120°$ & $-0.1559$ & $-50\%$ & $0.2700$ \\
+    \texttt{w4\_m087} & $150°$ & $-0.2700$ & $-87\%$ & $0.1559$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+% -----------------------------------------------------------
+\section{Initial Condition Directions ($k = 1$--$14$)}
+\label{sec:dirs}
+% -----------------------------------------------------------
+
+For each value of $w_4$, the unit vector
+$\hat{\boldsymbol{n}} \in \mathbb{R}^3$ is sampled at 14 directions
+on the $w_1$--$w_2$--$w_3$ sphere:
+6 coordinate-axis poles and 8 vertices of the inscribed cube.
+
+\begin{table}[H]
+  \centering
+  \caption{14 initial directions $\hat{\boldsymbol{n}}$}
+  \begin{tabular}{cll}
+    \toprule
+    $k$ & $\hat{\boldsymbol{n}} = (w_1,\,w_2,\,w_3)/r_3$ & Type \\
+    \midrule
+    1  & $(+1,\;0,\;0)$ & axis \\
+    2  & $(-1,\;0,\;0)$ & axis \\
+    3  & $(0,\;+1,\;0)$ & axis \\
+    4  & $(0,\;-1,\;0)$ & axis \\
+    5  & $(0,\;0,\;+1)$ & axis \\
+    6  & $(0,\;0,\;-1)$ & axis \\
+    7  & $(+1,\;+1,\;+1)/\!\sqrt{3}$ & diagonal \\
+    8  & $(-1,\;+1,\;+1)/\!\sqrt{3}$ & diagonal \\
+    9  & $(+1,\;-1,\;+1)/\!\sqrt{3}$ & diagonal \\
+    10 & $(-1,\;-1,\;+1)/\!\sqrt{3}$ & diagonal \\
+    11 & $(+1,\;+1,\;-1)/\!\sqrt{3}$ & diagonal \\
+    12 & $(-1,\;+1,\;-1)/\!\sqrt{3}$ & diagonal \\
+    13 & $(+1,\;-1,\;-1)/\!\sqrt{3}$ & diagonal \\
+    14 & $(-1,\;-1,\;-1)/\!\sqrt{3}$ & diagonal \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Each page below shows one trajectory:
+\textbf{left} — 3D orbit in physical $(x,y,z)$ space (blue line;
+black dot = Moon); \textbf{right} — initial point on the
+$w_1$--$w_2$--$w_3$ sphere (red dot).
+
+\clearpage
+
+% ===========================================================
+%  w4_p087  (theta = 30 deg, w4 = +0.270, r3 = 0.1559)
+% ===========================================================
+\section{$w_4 = +0.270$ \quad ($+87\%\,|\boldsymbol{w}|$, $\theta = 30°$) \quad \texttt{[w4\_p087]}}
+\label{sec:p087}
+
+$r_3 = 0.1559$.
+
+% --- k=1 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_01_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_01_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=1$: $\hat{\boldsymbol{n}}=(+1,\,0,\,0)$}
+\end{figure}
+
+% --- k=2 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_02_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_02_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=2$: $\hat{\boldsymbol{n}}=(-1,\,0,\,0)$}
+\end{figure}
+
+% --- k=3 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_03_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_03_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=3$: $\hat{\boldsymbol{n}}=(0,\,+1,\,0)$}
+\end{figure}
+
+% --- k=4 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_04_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_04_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=4$: $\hat{\boldsymbol{n}}=(0,\,-1,\,0)$}
+\end{figure}
+
+% --- k=5 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_05_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_05_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=5$: $\hat{\boldsymbol{n}}=(0,\,0,\,+1)$}
+\end{figure}
+
+% --- k=6 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_06_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_06_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=6$: $\hat{\boldsymbol{n}}=(0,\,0,\,-1)$}
+\end{figure}
+
+% --- k=7 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_07_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_07_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=7$: $\hat{\boldsymbol{n}}=(+1,\,+1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=8 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_08_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_08_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=8$: $\hat{\boldsymbol{n}}=(-1,\,+1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=9 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_09_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_09_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=9$: $\hat{\boldsymbol{n}}=(+1,\,-1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=10 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_10_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_10_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=10$: $\hat{\boldsymbol{n}}=(-1,\,-1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=11 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_11_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_11_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=11$: $\hat{\boldsymbol{n}}=(+1,\,+1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=12 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_12_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_12_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=12$: $\hat{\boldsymbol{n}}=(-1,\,+1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=13 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_13_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_13_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=13$: $\hat{\boldsymbol{n}}=(+1,\,-1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=14 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_14_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p087/traj_14_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=14$: $\hat{\boldsymbol{n}}=(-1,\,-1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+\clearpage
+
+% ===========================================================
+%  w4_p050  (theta = 60 deg, w4 = +0.156, r3 = 0.2700)
+% ===========================================================
+\section{$w_4 = +0.156$ \quad ($+50\%\,|\boldsymbol{w}|$, $\theta = 60°$) \quad \texttt{[w4\_p050]}}
+\label{sec:p050}
+
+$r_3 = 0.2700$.
+
+% --- k=1 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_01_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_01_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=1$: $\hat{\boldsymbol{n}}=(+1,\,0,\,0)$}
+\end{figure}
+
+% --- k=2 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_02_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_02_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=2$: $\hat{\boldsymbol{n}}=(-1,\,0,\,0)$}
+\end{figure}
+
+% --- k=3 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_03_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_03_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=3$: $\hat{\boldsymbol{n}}=(0,\,+1,\,0)$}
+\end{figure}
+
+% --- k=4 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_04_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_04_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=4$: $\hat{\boldsymbol{n}}=(0,\,-1,\,0)$}
+\end{figure}
+
+% --- k=5 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_05_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_05_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=5$: $\hat{\boldsymbol{n}}=(0,\,0,\,+1)$}
+\end{figure}
+
+% --- k=6 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_06_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_06_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=6$: $\hat{\boldsymbol{n}}=(0,\,0,\,-1)$}
+\end{figure}
+
+% --- k=7 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_07_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_07_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=7$: $\hat{\boldsymbol{n}}=(+1,\,+1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=8 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_08_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_08_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=8$: $\hat{\boldsymbol{n}}=(-1,\,+1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=9 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_09_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_09_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=9$: $\hat{\boldsymbol{n}}=(+1,\,-1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=10 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_10_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_10_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=10$: $\hat{\boldsymbol{n}}=(-1,\,-1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=11 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_11_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_11_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=11$: $\hat{\boldsymbol{n}}=(+1,\,+1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=12 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_12_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_12_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=12$: $\hat{\boldsymbol{n}}=(-1,\,+1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=13 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_13_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_13_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=13$: $\hat{\boldsymbol{n}}=(+1,\,-1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=14 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_14_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p050/traj_14_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=14$: $\hat{\boldsymbol{n}}=(-1,\,-1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+\clearpage
+
+% ===========================================================
+%  w4_p000  (theta = 90 deg, w4 = 0.000, r3 = 0.3118)
+% ===========================================================
+\section{$w_4 = 0.000$ \quad ($0\%\,|\boldsymbol{w}|$, $\theta = 90°$) \quad \texttt{[w4\_p000]}}
+\label{sec:p000}
+
+$r_3 = 0.3118$.
+
+% --- k=1 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_01_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_01_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=1$: $\hat{\boldsymbol{n}}=(+1,\,0,\,0)$}
+\end{figure}
+
+% --- k=2 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_02_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_02_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=2$: $\hat{\boldsymbol{n}}=(-1,\,0,\,0)$}
+\end{figure}
+
+% --- k=3 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_03_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_03_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=3$: $\hat{\boldsymbol{n}}=(0,\,+1,\,0)$}
+\end{figure}
+
+% --- k=4 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_04_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_04_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=4$: $\hat{\boldsymbol{n}}=(0,\,-1,\,0)$}
+\end{figure}
+
+% --- k=5 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_05_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_05_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=5$: $\hat{\boldsymbol{n}}=(0,\,0,\,+1)$}
+\end{figure}
+
+% --- k=6 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_06_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_06_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=6$: $\hat{\boldsymbol{n}}=(0,\,0,\,-1)$}
+\end{figure}
+
+% --- k=7 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_07_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_07_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=7$: $\hat{\boldsymbol{n}}=(+1,\,+1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=8 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_08_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_08_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=8$: $\hat{\boldsymbol{n}}=(-1,\,+1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=9 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_09_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_09_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=9$: $\hat{\boldsymbol{n}}=(+1,\,-1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=10 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_10_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_10_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=10$: $\hat{\boldsymbol{n}}=(-1,\,-1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=11 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_11_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_11_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=11$: $\hat{\boldsymbol{n}}=(+1,\,+1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=12 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_12_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_12_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=12$: $\hat{\boldsymbol{n}}=(-1,\,+1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=13 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_13_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_13_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=13$: $\hat{\boldsymbol{n}}=(+1,\,-1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=14 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_14_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_p000/traj_14_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=14$: $\hat{\boldsymbol{n}}=(-1,\,-1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+\clearpage
+
+% ===========================================================
+%  w4_m050  (theta = 120 deg, w4 = -0.156, r3 = 0.2700)
+% ===========================================================
+\section{$w_4 = -0.156$ \quad ($-50\%\,|\boldsymbol{w}|$, $\theta = 120°$) \quad \texttt{[w4\_m050]}}
+\label{sec:m050}
+
+$r_3 = 0.2700$.
+
+% --- k=1 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_01_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_01_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=1$: $\hat{\boldsymbol{n}}=(+1,\,0,\,0)$}
+\end{figure}
+
+% --- k=2 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_02_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_02_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=2$: $\hat{\boldsymbol{n}}=(-1,\,0,\,0)$}
+\end{figure}
+
+% --- k=3 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_03_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_03_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=3$: $\hat{\boldsymbol{n}}=(0,\,+1,\,0)$}
+\end{figure}
+
+% --- k=4 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_04_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_04_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=4$: $\hat{\boldsymbol{n}}=(0,\,-1,\,0)$}
+\end{figure}
+
+% --- k=5 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_05_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_05_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=5$: $\hat{\boldsymbol{n}}=(0,\,0,\,+1)$}
+\end{figure}
+
+% --- k=6 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_06_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_06_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=6$: $\hat{\boldsymbol{n}}=(0,\,0,\,-1)$}
+\end{figure}
+
+% --- k=7 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_07_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_07_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=7$: $\hat{\boldsymbol{n}}=(+1,\,+1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=8 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_08_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_08_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=8$: $\hat{\boldsymbol{n}}=(-1,\,+1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=9 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_09_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_09_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=9$: $\hat{\boldsymbol{n}}=(+1,\,-1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=10 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_10_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_10_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=10$: $\hat{\boldsymbol{n}}=(-1,\,-1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=11 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_11_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_11_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=11$: $\hat{\boldsymbol{n}}=(+1,\,+1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=12 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_12_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_12_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=12$: $\hat{\boldsymbol{n}}=(-1,\,+1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=13 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_13_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_13_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=13$: $\hat{\boldsymbol{n}}=(+1,\,-1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=14 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_14_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m050/traj_14_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=14$: $\hat{\boldsymbol{n}}=(-1,\,-1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+\clearpage
+
+% ===========================================================
+%  w4_m087  (theta = 150 deg, w4 = -0.270, r3 = 0.1559)
+% ===========================================================
+\section{$w_4 = -0.270$ \quad ($-87\%\,|\boldsymbol{w}|$, $\theta = 150°$) \quad \texttt{[w4\_m087]}}
+\label{sec:m087}
+
+$r_3 = 0.1559$.
+
+% --- k=1 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_01_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_01_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=1$: $\hat{\boldsymbol{n}}=(+1,\,0,\,0)$}
+\end{figure}
+
+% --- k=2 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_02_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_02_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=2$: $\hat{\boldsymbol{n}}=(-1,\,0,\,0)$}
+\end{figure}
+
+% --- k=3 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_03_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_03_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=3$: $\hat{\boldsymbol{n}}=(0,\,+1,\,0)$}
+\end{figure}
+
+% --- k=4 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_04_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_04_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=4$: $\hat{\boldsymbol{n}}=(0,\,-1,\,0)$}
+\end{figure}
+
+% --- k=5 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_05_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_05_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=5$: $\hat{\boldsymbol{n}}=(0,\,0,\,+1)$}
+\end{figure}
+
+% --- k=6 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_06_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_06_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=6$: $\hat{\boldsymbol{n}}=(0,\,0,\,-1)$}
+\end{figure}
+
+% --- k=7 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_07_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_07_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=7$: $\hat{\boldsymbol{n}}=(+1,\,+1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=8 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_08_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_08_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=8$: $\hat{\boldsymbol{n}}=(-1,\,+1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=9 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_09_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_09_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=9$: $\hat{\boldsymbol{n}}=(+1,\,-1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=10 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_10_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_10_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=10$: $\hat{\boldsymbol{n}}=(-1,\,-1,\,+1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=11 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_11_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_11_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=11$: $\hat{\boldsymbol{n}}=(+1,\,+1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=12 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_12_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_12_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=12$: $\hat{\boldsymbol{n}}=(-1,\,+1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=13 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_13_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_13_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=13$: $\hat{\boldsymbol{n}}=(+1,\,-1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+% --- k=14 ---
+\begin{figure}[H]
+\centering
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_14_orbit.pdf}
+\caption{3D orbit}
+\end{subfigure}\hfill
+\begin{subfigure}[t]{0.48\linewidth}
+\includegraphics[width=\linewidth]{w4_m087/traj_14_sphere.pdf}
+\caption{Initial point on sphere}
+\end{subfigure}
+\caption{$k=14$: $\hat{\boldsymbol{n}}=(-1,\,-1,\,-1)/\!\sqrt{3}$}
+\end{figure}
+
+\end{document}

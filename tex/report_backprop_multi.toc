@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Problem Setup}{2}{section.1}%
+\contentsline {section}{\numberline {2}Computation Parameters}{2}{section.2}%
+\contentsline {section}{\numberline {3}Initial Condition Directions ($k = 1$--$14$)}{2}{section.3}%
+\contentsline {section}{\numberline {4}$w_4 = +0.270$ \hskip 1em\relax ($+87\%\,|\boldsymbol {w}|$, $\theta = 30°$) \hskip 1em\relax \texttt {[w4\_p087]}}{4}{section.4}%
+\contentsline {section}{\numberline {5}$w_4 = +0.156$ \hskip 1em\relax ($+50\%\,|\boldsymbol {w}|$, $\theta = 60°$) \hskip 1em\relax \texttt {[w4\_p050]}}{11}{section.5}%
+\contentsline {section}{\numberline {6}$w_4 = 0.000$ \hskip 1em\relax ($0\%\,|\boldsymbol {w}|$, $\theta = 90°$) \hskip 1em\relax \texttt {[w4\_p000]}}{18}{section.6}%
+\contentsline {section}{\numberline {7}$w_4 = -0.156$ \hskip 1em\relax ($-50\%\,|\boldsymbol {w}|$, $\theta = 120°$) \hskip 1em\relax \texttt {[w4\_m050]}}{25}{section.7}%
+\contentsline {section}{\numberline {8}$w_4 = -0.270$ \hskip 1em\relax ($-87\%\,|\boldsymbol {w}|$, $\theta = 150°$) \hskip 1em\relax \texttt {[w4\_m087]}}{32}{section.8}%
